@@ -1,0 +1,495 @@
+* {
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Consolas, sans-serif;
+}
+
+.navbar {
+    position: sticky;
+    padding: 20px 290px;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    z-index: 1000;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 31px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 9%;
+    font-weight: 300;
+    transition: 0.3s ease;
+}
+
+.logo a:hover {
+    background-color: rgb(144, 85, 162);
+    padding: 10px;
+    border: dotted white 3px;
+}
+
+.navLinks li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 50px;
+}
+
+.navLinks li a {
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+    letter-spacing: 9%;
+}
+
+.navLinks li a:hover {
+    background-color: rgb(144, 85, 162);
+    padding: 10px;
+    border: dotted white 3px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+section {
+    scroll-margin-top: 96px;
+    background-color: rgb(32, 30, 47);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+section #home {
+    height: calc(100vh - 96px);
+}
+
+section #MidtermActivities {
+    scroll-margin-top: 120px;
+}
+
+#PrelimActivities, #MidtermActivites {
+    scroll-margin-top: 118px;
+}
+
+.content {
+    padding: 0 15%;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.white-box {
+    height: calc(100vh - 250px);
+    margin-top: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.profilePic {
+    width: 320px;
+    height: 320px;
+    border-radius: 10px;
+}
+
+#homeText {
+    margin-top: 20px;
+    padding-right: 20px;
+}
+
+#homeText h1 {
+    font-size: 60px;
+    color: white;
+    margin: 5px;
+}
+
+#homeText h2 {
+    color: gray;
+    margin: 5px;
+}
+
+#homeText p {
+    color: gray;
+    font-size: 21px;
+    width: 15em;
+    text-align: left;
+}
+
+#accounts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+#accounts img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+#accounts img:hover {
+    transition: 0.5s ease;
+    padding: 5px 5px;
+    background-color: rgb(111, 170, 93);
+    border-radius: 50%;
+    border: groove rgb(0, 0, 0) 3px;
+}
+
+.aboutPic {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    padding-right: 30px;
+    margin-left: 300px;
+}
+
+#about .white-box {
+    display: flex;
+    flex-direction: column;
+}
+
+#about .white-box #homeText h2 {
+    color: white;
+}
+
+#about .white-box #homeText p {
+    padding-left: 50px;
+    margin: 0 10em 0 0;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#education .white-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.ruler {
+    height: 400px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+#education .details h1, #education .details p {
+    margin: 0;
+}
+
+#education .details h1 {
+    margin-top: 30px;
+    margin: 0;
+}
+
+.eduFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.customList {
+    list-style-type: none;
+    padding: 0;
+    
+    li {
+        background-color: black;
+        border-radius: 10px;
+        padding: 1px;
+    }
+}
+
+.customList h1 {
+    color: white;
+}
+
+.customList p {
+    color: gray;
+}
+
+.customList li {
+    position: relative;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.customList li:nth-child(even) {
+    padding-left: 50px;
+    justify-content: flex-end;
+}
+
+.customList li:nth-child(even)::before {
+    content: '•';
+    color: rgb(144, 85, 162);
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1;
+}
+
+.customList li:nth-child(odd) {
+    padding-right: 50px;
+    text-align: right;
+}
+
+.customList li:nth-child(odd)::before {
+    content: '•';
+    color: rgb(144, 85, 162);
+    font-size: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 1;
+}
+
+.header {
+    font-size: 40px;
+    color: white;
+    margin: 0;
+    margin-bottom: 0px;
+
+    img {
+        height: 50px;
+        width: 50px;
+        margin-right: 20px;
+    }
+}
+
+#misAndVisSection .white-box{
+    height: auto;
+    flex-direction: column;
+}
+
+.misAndVis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 50em;
+    height: 80px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    position: relative;
+    
+    div {
+        background-color: rgb(1, 147, 64);
+        border-radius: 25px;
+        width: 50em;
+        padding: 0 20px;
+        color: white;
+        position: relative;
+        z-index: 1;
+        transition: background-color 0.5s ease;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 21px;
+    }
+}
+
+.misAndVis .vision {
+    margin-left: 20px;
+}
+
+.misAndVis:hover {
+    height: 320px;
+}
+
+.misAndVis div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('PHOTOS/PnC logo.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.misAndVis:hover div::before {
+    opacity: 0.2;
+}
+
+.white-box .header {
+    margin-bottom: 20px;
+}
+
+#about .white-box {
+    height:auto;
+}
+
+#works .white-box {
+    display: flex;
+    flex-direction: column;
+}
+
+#works .white-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    gap: 50px
+}
+
+#works .white-box p {
+    font-size: 25px;
+    color: white;
+    margin: 0;
+}
+
+.scrollable-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.scrollable-container img {
+    flex: 1 1 auto;
+    padding: 5px;
+    border-radius: 10px;
+    object-fit: cover;
+    width: auto;
+    height: 495px;
+}
+
+@media screen and (max-width: 960px) {
+    .content {
+        padding: 10px;
+    }
+
+    .navbar {
+        padding-left: 50px;
+        padding-right: 50px;
+        position: sticky;
+
+        .logo a{
+            font-size: 21px;
+        }
+    }
+
+    .navLinks {
+        padding: 0;
+
+        li {
+            padding: 0;
+        }
+
+        li a{
+        font-size: 10px;
+        }
+    }
+    
+    section {
+        width: 100%;
+    }
+
+    #home .white-box {
+        flex-direction: column-reverse;
+
+        .profilePic {
+            width: 200px;
+            height: 200px;
+        }
+
+        #accounts {
+            flex-direction: row;
+        }
+    }
+
+    #about .white-box #homeText p, h1{
+        padding: 0;
+        margin: 0;
+    }
+
+    #about .white-box #homeText p{
+        padding-left: 20px;
+    }
+
+    .aboutPic {
+        height: 200px;
+        width: 200px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #about .aboutContainer{
+        flex-direction: column;
+    }
+
+    #homeText {
+        padding: 0;
+    }
+
+    #misAndVisSection .white-box{
+        flex-direction: column ;
+    }
+
+    .misAndVis {
+        flex-direction: column;
+        height: 600px;
+        gap: 20px;
+        width: 300px;
+        align-items: center;
+
+        div{
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 30px 0;
+        }
+
+        p {
+            font-size: 15px;
+            margin: 0 280px;
+        }
+    }
+
+    .misAndVis:hover {
+        color: inherit;
+        background-color: inherit;
+        transition: none;
+        height: inherit;
+    }
+}
