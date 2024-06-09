@@ -7,7 +7,7 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
-    font-family: Consolas, sans-serif;
+    font-family: Montserrat, Century Gothic, sans-serif;
 }
 
 .navbar {
@@ -86,7 +86,7 @@ section #MidtermActivities {
 .content {
     padding: 0 15%;
     box-sizing: border-box;
-    text-align: justify;
+    text-align: left;
 }
 
 .white-box {
@@ -94,7 +94,6 @@ section #MidtermActivities {
     margin-top: 20px;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -110,6 +109,7 @@ section #MidtermActivities {
     width: 320px;
     height: 320px;
     border-radius: 10px;
+    filter: drop-shadow(1px 1px 5px white);
 }
 
 #homeText {
@@ -145,7 +145,7 @@ section #MidtermActivities {
 #accounts img {
     width: 30px;
     height: 30px;
-    filter: invert(1);
+    filter: invert(1) sepia(1) saturate(10000%) hue-rotate(-70deg);
 }
 
 #accounts img:hover {
@@ -154,6 +154,7 @@ section #MidtermActivities {
     background-color: rgb(111, 170, 93);
     border-radius: 50%;
     border: groove rgb(0, 0, 0) 3px;
+    filter: invert brightness(100%);
 }
 
 .aboutPic {
@@ -162,6 +163,7 @@ section #MidtermActivities {
     border-radius: 10px;
     padding-right: 30px;
     margin-left: 300px;
+    filter: drop-shadow(1px 1px 5px white);
 }
 
 #about .white-box {
@@ -188,6 +190,7 @@ section #MidtermActivities {
 #education .white-box {
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 
 .ruler {
@@ -202,8 +205,8 @@ section #MidtermActivities {
 }
 
 #education .details h1 {
-    margin-top: 30px;
     margin: 0;
+    margin-bottom: 5px;
 }
 
 .eduFlex {
@@ -390,6 +393,14 @@ section #MidtermActivities {
     height: 495px;
 }
 
+.cssClass {
+    color: rgb(238, 52, 65);
+}
+
+.brackets {
+    color: rgb(241, 201, 31);
+}
+
 @media screen and (max-width: 960px) {
     .content {
         padding: 10px;
@@ -458,8 +469,14 @@ section #MidtermActivities {
         padding: 0;
     }
 
-    #misAndVisSection .white-box{
-        flex-direction: column ;
+    #misAndVisSection .header{
+        font-size: 20px;
+
+        img {
+            width: 30px;
+            height: 30px;
+            display: block;
+        }
     }
 
     .misAndVis {
@@ -487,9 +504,26 @@ section #MidtermActivities {
     }
 
     .misAndVis:hover {
-        color: inherit;
-        background-color: inherit;
-        transition: none;
         height: inherit;
+    }
+
+    .white-box {
+        height: fit-content;
+    }
+
+    #education h1 {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 386px) {
+    .scrollable-container {
+        flex-direction: column;
+    }
+
+        .scrollable-container img {
+            width: 95%;
+            height: auto;
+            object-fit: cover;
     }
 }
