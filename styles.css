@@ -7,7 +7,7 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
-    font-family: Montserrat, Century Gothic, sans-serif;
+    font-family: Consolas, sans-serif;
 }
 
 .navbar {
@@ -29,13 +29,13 @@ body {
     color: rgb(255, 255, 255);
     letter-spacing: 9%;
     font-weight: 300;
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 .logo a:hover {
     background-color: rgb(144, 85, 162);
     padding: 10px;
-    border: dotted white 3px;
+    animation: blinking 1s infinite;
 }
 
 .navLinks li {
@@ -47,14 +47,13 @@ body {
 .navLinks li a {
     color: white;
     font-size: 16px;
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease, padding 0.3s ease;
     letter-spacing: 9%;
 }
 
 .navLinks li a:hover {
     background-color: rgb(144, 85, 162);
-    padding: 10px;
-    border: dotted white 3px;
+    animation: blinking 1s linear infinite;
 }
 
 .container {
@@ -153,7 +152,7 @@ section #MidtermActivities {
     padding: 5px 5px;
     background-color: rgb(111, 170, 93);
     border-radius: 50%;
-    border: groove rgb(0, 0, 0) 3px;
+    animation: blinking 1s infinite;
     filter: invert brightness(100%);
 }
 
@@ -221,10 +220,16 @@ section #MidtermActivities {
     padding: 0;
     
     li {
-        background-color: black;
         border-radius: 10px;
         padding: 1px;
+        background-color: black;
     }
+}
+
+.dateRange{
+    font-weight: bold;
+    color: white;
+    margin: 5px 0;
 }
 
 .customList h1 {
@@ -239,37 +244,41 @@ section #MidtermActivities {
     position: relative;
     padding: 20px;
     margin: 10px 0;
+    transition: padding 0.3s ease, border 0.3s ease;
+    border: rgb(144, 85, 162) solid 5px;
+}
+
+.customList li:hover {
+    animation: blinking 1s linear infinite;
+}
+
+@keyframes blinking {
+    0% {
+        border: 5px dotted red;
+    }
+    33% {
+        border: 5px dotted yellow;
+    }
+    66% {
+        border: 5px dotted blue;
+    }
+    100% {
+        border: 5px dotted red;
+    }
 }
 
 .customList li:nth-child(even) {
     padding-left: 50px;
-    justify-content: flex-end;
-}
-
-.customList li:nth-child(even)::before {
-    content: '•';
-    color: rgb(144, 85, 162);
-    font-size: 40px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    line-height: 1;
+    margin-right: 45%;
+    text-align: right;
 }
 
 .customList li:nth-child(odd) {
     padding-right: 50px;
-    text-align: right;
+    text-align: left;
+    margin-left: 45%;
 }
 
-.customList li:nth-child(odd)::before {
-    content: '•';
-    color: rgb(144, 85, 162);
-    font-size: 40px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    line-height: 1;
-}
 
 .header {
     font-size: 40px;
@@ -391,6 +400,11 @@ section #MidtermActivities {
     object-fit: cover;
     width: auto;
     height: 495px;
+    transition: border 0.3s ease;
+}
+
+.scrollable-container img:hover {
+    animation: blinking 1s infinite;
 }
 
 .cssClass {
@@ -399,6 +413,36 @@ section #MidtermActivities {
 
 .brackets {
     color: rgb(241, 201, 31);
+}
+
+#skills .white-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: auto;
+}
+
+#skills .white-box #imageDiv {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#skills .white-box #imageDiv img {
+    height: 100px;
+    width: auto;
+    transition: height 0.3s ease, filter 0.3s ease;
+}
+
+#skills .white-box #imageDiv img:hover {
+    height: 150px;
+    filter: drop-shadow(1px 1px 5px orange);
+}
+
+#invertFix {
+    filter: invert(1) sepia(1) saturate(10000%) hue-rotate(-70deg);
 }
 
 @media screen and (max-width: 960px) {
@@ -421,10 +465,7 @@ section #MidtermActivities {
 
         li {
             padding: 0;
-        }
-
-        li a{
-        font-size: 10px;
+            margin-right: 20px;
         }
     }
     
@@ -445,7 +486,7 @@ section #MidtermActivities {
         }
     }
 
-    #about .white-box #homeText p, h1{
+    #about .white-box #homeText p, h2{
         padding: 0;
         margin: 0;
     }
@@ -514,9 +555,44 @@ section #MidtermActivities {
     #education h1 {
         font-size: 21px;
     }
+
+    #skills #imageDiv{
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header {
+        text-align: center;
+        img {
+            display: none !important;
+        }
+    }
 }
 
 @media screen and (max-width: 386px) {
+    .navbar {
+        padding: 10px 40px;
+
+        .logo a {
+            font-size: 12px;
+        }
+    }
+
+    .navLinks {
+        padding: 0;
+
+        li {
+            padding: 0;
+            margin: 0;
+        }
+
+        li a {
+            font-size: 8px;
+        }
+    }
+
     .scrollable-container {
         flex-direction: column;
     }
@@ -525,5 +601,18 @@ section #MidtermActivities {
             width: 95%;
             height: auto;
             object-fit: cover;
+    }
+
+    
+    #skills #imageDiv img {
+        height: 50px !important;
+    }
+
+    .customList li:nth-child(odd) {
+        margin-left: 0%;
+    }
+
+    .customList li:nth-child(even) {
+        margin-right: 0%;
     }
 }
